@@ -4,9 +4,12 @@ public class Course {
 	Student[] members;
 	
 	int nextPosition = 0;
+	String name;
 
-	public Course(int numberOfStudents) {
-		members = new Student[numberOfStudents];
+
+	public Course(String name, int numberOfStudents) {
+		this.members = new Student[numberOfStudents];
+		this.name = name;
 	}
 	
 	public void addMember(String name) throws Exception {
@@ -24,8 +27,16 @@ public class Course {
 		return members[member];
 	}
 	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 	public static void main(String[] args) throws Exception {
-		Course java2 = new Course(5);
+		Course java2 = new Course("Softwaretechnologie: Java 2", 5);
 		java2.addMember("Liraz Lucinde");
 		java2.addMember("Floro Mehrnaz");
 		java2.addMember("Emmanuelle Dinesh"); 
