@@ -25,7 +25,7 @@ public class Course {
 	}
 	
 	public static void main(String[] args) throws Exception {
-		Course java2 = new Course(10);
+		Course java2 = new Course(5);
 		java2.addMember("Liraz Lucinde");
 		java2.addMember("Floro Mehrnaz");
 		java2.addMember("Emmanuelle Dinesh"); 
