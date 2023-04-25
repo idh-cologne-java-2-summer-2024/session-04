@@ -1,8 +1,6 @@
 package idh.java;
 
-import java.util.Iterator;
-
-public class Course implements Iterable<Student> {
+public class Course {
 	Student[] members;
 	
 	int nextPosition = 0;
@@ -45,23 +43,5 @@ public class Course implements Iterable<Student> {
 		java2.addMember("Reshma Vera");
 		java2.addMember("Isaac Sumire");
 		
-		// ... 
-		Iterator<Student> iter = new StudentIterator(java2);
-		while (iter.hasNext()) {
-			Student s = iter.next();
-			System.out.println(s.getName());
-		}
-			
-
-		for (Object student : java2) {
-			System.out.println(student);
-		}
-		
-		
-	}
-
-	@Override
-	public Iterator<Student> iterator() {
-		return new StudentIterator(this);
 	}
 }

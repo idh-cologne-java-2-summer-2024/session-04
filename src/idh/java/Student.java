@@ -1,6 +1,6 @@
 package idh.java;
 
-public class Student extends Object {
+public class Student {
 	String name;
 
 	public String getName() {
@@ -14,10 +14,6 @@ public class Student extends Object {
 	public Student(String name) {
 		super();
 		this.name = name;
-	}
-	
-	public String toString() {
-		return name;
 	}
 	
 }
