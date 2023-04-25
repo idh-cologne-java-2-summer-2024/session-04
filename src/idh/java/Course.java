@@ -34,6 +34,19 @@ public class Course {
 	public void setName(String name) {
 		this.name = name;
 	}
+	
+	public String getDescription() {
+		StringBuilder buf = new StringBuilder();
+		buf.append(this.getName()).append('\n');
+		for (int i = 0; i < this.name.length(); i++) {
+			buf.append('-');
+		}
+		buf.append('\n');
+		buf.append("Students: ");
+		buf.append(members);
+		buf.append('\n');
+		return buf.toString();
+	}
 
 	public static void main(String[] args) throws Exception {
 		Course java2 = new Course("Fortgeschrittene Programmierung (Java 2)", 5);
@@ -42,6 +55,7 @@ public class Course {
 		java2.addMember("Emmanuelle Dinesh"); 
 		java2.addMember("Reshma Vera");
 		java2.addMember("Isaac Sumire");
+		System.out.println(java2.getDescription());
 		
 	}
 }
