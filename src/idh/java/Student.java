@@ -2,6 +2,7 @@ package idh.java;
 
 public class Student {
     String name;
+    int matrikelNummer;
 
     public String getName() {
 	return name;

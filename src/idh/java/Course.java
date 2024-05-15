@@ -59,13 +59,6 @@ public class Course implements Iterable<Student> {
 	System.out.println(java2.getDescription());
 
 	StudentIterator iter = new StudentIterator(java2);
-
-	while (iter.hasNext()) {
-	    System.out.println(iter.next().getName());
-	}
-	System.out.println();
-
-	iter = new StudentIterator(java2);
 	while (iter.hasNext()) {
 	    System.out.println(iter.next().getName());
 	}
@@ -73,11 +66,9 @@ public class Course implements Iterable<Student> {
 
 	for (Student student : java2) {
 	    System.out.println(student.getName());
-
 	    for (Student student2 : java2) {
 		System.out.println(student2.getName());
 	    }
-
 	}
 
     }
